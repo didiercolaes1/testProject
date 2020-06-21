@@ -2,12 +2,12 @@ package edu.ap.spring.model;
 
 public class Student {
     String voornaam;
-    String Achternaam;
+    String achternaam;
     String telefoon;
 
     public Student(String voornaam, String achternaam, String telefoon) {
         this.voornaam = voornaam;
-        Achternaam = achternaam;
+        this.achternaam = achternaam;
         this.telefoon = telefoon;
     }
 
@@ -23,11 +23,11 @@ public class Student {
     }
 
     public String getAchternaam() {
-        return Achternaam;
+        return achternaam;
     }
 
     public void setAchternaam(String achternaam) {
-        Achternaam = achternaam;
+        this.achternaam = achternaam;
     }
 
     public String getTelefoon() {
@@ -42,7 +42,7 @@ public class Student {
     public String toString() {
         return "Student{" +
                 "voornaam='" + voornaam + '\'' +
-                ", Achternaam='" + Achternaam + '\'' +
+                ", Achternaam='" + achternaam + '\'' +
                 ", telefoon='" + telefoon + '\'' +
                 '}';
     }

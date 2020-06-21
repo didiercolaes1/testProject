@@ -25,7 +25,7 @@ public class InhaalExamenController {
    @RequestMapping("/list")
    @ResponseBody
    public String listExams(Student student) {
-//	   http://localhost:8080/list?voornaam=v1&Achternaam=a1&telefoon=tel
+//	   http://localhost:8080/list?voornaam=v1&achternaam=a1&telefoon=tel
 	   List<InhaalExamen> exams = new ArrayList<InhaalExamen>();
 	   Set<String> keys = service.keys("exams:*");
 	   for(String key : keys) {
@@ -107,13 +107,14 @@ public class InhaalExamenController {
 	   
 	   return b.toString();
    }
-   
+
+   // getmapping omdat post niet werkt in browser, werkt wel wanneer je switched
    @GetMapping("/new")
    @ResponseBody
    public String makeReservation(Student student,
 		   						@RequestParam("exam") String exam,
 		   						@RequestParam("reason") String reason) {
-	   // localhost:8080/new?voornaam=v1&Achternaam=a1&telefoon=tel&exam=e1&reason=smooi
+	   // localhost:8080/new?voornaam=v1&achternaam=a1&telefoon=tel&exam=e1&reason=smooi
 	   String pattern = "exams:" + exam + ":" + student.getVoornaam() + ":" + reason + ":*";
 	   Set<String> keys = service.keys(pattern);
 	   if(keys.size() == 0) {

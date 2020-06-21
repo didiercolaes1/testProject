@@ -3,7 +3,7 @@ package edu.ap.spring.model;
 import java.time.LocalDate;
 
 public class InhaalExamen {
- 
+ // etra comment
     private Student student;
     private String exam;
  	private String date;
